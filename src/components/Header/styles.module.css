@@ -1,0 +1,10 @@
+header.header {
+  background-color: #032541;
+  padding: 15px 0;
+  margin: 0 auto;
+  display: flex;
+}
+
+header .logo {
+  height: 20px;
+}
