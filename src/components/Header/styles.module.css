@@ -1,10 +1,57 @@
 header.header {
   background-color: #032541;
-  padding: 15px 0;
+  padding: 15px 40px;
   margin: 0 auto;
   display: flex;
 }
 
+header img {
+  height: 1.6em;
+}
+
+.header__main {
+  padding: 0 40px;
+}
+
 header .logo {
   height: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header nav.nav__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .nav__menu_item {
+  display: flex;
+}
+
+header .nav__menu_item a {
+  display: flex;
+  margin: 0 5px;
+  align-items: center;
+}
+
+header span.plus {
+  background-image: url("https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-371-plus-white-0bac34f16124808a12ea863b4d9cc6e599dee7c0a80658cfe9ead26939e64517.svg");
+}
+
+header span.search {
+  background-image: url("https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-28-search-blue-177462d06db81ff2a02aa022c1c0be5ba4200d7bd3f51091ed9298980e3a26a1.svg");
+}
+
+header span.logoItem {
+  display: inline-flex;
+  min-width: 1em;
+  min-height: 1em;
+  /* align-items: center; */
+  /* justify-content: center; */
+  background-position: center;
+  font-size: 1.6em;
 }
