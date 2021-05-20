@@ -1,19 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import styles from "./styles.module.css"
 
-const SearchPanel = ({
-  searchMovie,
-  setSearchMovie,
-  getMovie,
-  getPopularMovie,
-  getPopularMovieInTheatre,
-}) => {
-  useEffect(() => {
-    getPopularMovie(1)
-    getPopularMovieInTheatre()
-  }, [])
+const SearchPanel = ({ searchMovie, setSearchMovie, getMovie }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setSearchMovie(e.target.value)
@@ -57,6 +47,4 @@ SearchPanel.propTypes = {
   searchMovie: PropTypes.string.isRequired,
   setSearchMovie: PropTypes.func.isRequired,
   getMovie: PropTypes.func.isRequired,
-  getPopularMovie: PropTypes.func.isRequired,
-  getPopularMovieInTheatre: PropTypes.func.isRequired,
 }
