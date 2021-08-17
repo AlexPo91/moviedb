@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import styles from "./styles.module.css"
 
 const Header = () => (
@@ -7,11 +8,11 @@ const Header = () => (
       <div className={styles.header__main}>
         <nav className={styles.nav__menu}>
           <div className={styles.nav__menu_item}>
-            <a href="locolhost:3000">
+            <Link to="/">
               <img className={styles.logo} src="/assets/logo.svg" alt="logo" />
-            </a>
-            <a href="locolhost:3000">Фильмы</a>
-            <a href="locolhost:3000">Сериалы</a>
+            </Link>
+            <Link to="/films">Фильмы</Link>
+            <Link to="/serials">Сериалы</Link>
             <a href="locolhost:3000">Люди</a>
             <a href="locolhost:3000">Еще</a>
           </div>

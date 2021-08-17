@@ -1,7 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from "react"
 import PropTypes from "prop-types"
+// import { Link } from "react-router-dom"
 import styles from "./styles.module.css"
+// eslint-disable-next-line import/extensions
 
 const SearchPanel = ({ searchMovie, setSearchMovie, getMovie }) => {
   const handleSubmit = (e) => {

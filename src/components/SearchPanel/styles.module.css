@@ -39,7 +39,7 @@ input.inputSearch {
     font-weight: 400;
     color: gray;
 }
-input.buttonSearch{
+.buttonSearch{
 
     font-size: 1em;
     position: absolute;

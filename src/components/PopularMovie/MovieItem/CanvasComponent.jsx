@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 
 const CanvasComponnent = ({ voteAverage }) => {
   const canvasRef = useRef(null)
-  console.log(voteAverage)
   useEffect(() => {
     const canvas = canvasRef.current
     const context = canvas.getContext("2d")

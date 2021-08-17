@@ -14,6 +14,7 @@ const PopularMovie = ({ popularMoviesInTheatre }) => {
   return (
     <div className={styles.PopularMovie}>
       <div className="wrapper">
+        <h2>Что популярно</h2>
         <Swiper
           spaceBetween={50}
           slidesPerView={7}

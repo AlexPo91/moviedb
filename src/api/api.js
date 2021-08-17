@@ -5,7 +5,9 @@ const movieDBApi = {
   getMovie(movie) {
     return fetch(
       `${url}search/multi?api_key=${API_KEY}&query=${movie}&language=ru`
-    ).then((data) => data.json())
+    )
+      .then((data) => data.json())
+      .then((parseData) => parseData.results)
   },
   getPopularMovie(page) {
     return fetch(

@@ -56,14 +56,16 @@ export const getPopularMoviesInTheatreAC = (movies) => ({
 })
 export const getMovieAsync = (movie) => (dispatch) =>
   movieDBApi.getMovie(movie).then((data) => {
-    console.log(data)
     dispatch(getMoviesAC(data))
+    console.log(data)
   })
+
 export const getPopularMovieAsync = (page) => (dispatch) =>
   movieDBApi.getPopularMovie(page).then((data) => {
     console.log(data)
     dispatch(getPopularMoviesAC(data))
   })
+
 export const getPopularMovieInTheatreAsync = () => (dispatch) =>
   movieDBApi.getPopularMovieInTheatre().then((data) => {
     console.log(data)

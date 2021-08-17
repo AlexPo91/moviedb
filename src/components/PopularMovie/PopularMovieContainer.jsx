@@ -10,8 +10,11 @@ const PopularMovieContainer = ({
   popularMoviesInTheatre,
 }) => {
   useEffect(() => {
+    // if (!popularMoviesInTheatre) {
     getPopularMovieInTheatre()
+    // }
   }, [])
+
   return popularMoviesInTheatre ? (
     <PopularMovie popularMoviesInTheatre={popularMoviesInTheatre} />
   ) : null
