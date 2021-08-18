@@ -1,7 +1,7 @@
 {
   "name": "moviedb",
-  "homepage": "http://AlexPo91.github.io/moviedb",
   "version": "0.1.0",
+  "homepage": "http://alexpo91.github.io/moviedb",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",

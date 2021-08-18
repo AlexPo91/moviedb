@@ -2,19 +2,19 @@ import React from "react"
 import ReactDOM from "react-dom"
 import "./index.css"
 import { Provider } from "react-redux"
-import { HashRouter } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import store from "./redux/store"
 
 ReactDOM.render(
-  <HashRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <React.StrictMode>
       <Provider store={store}>
         <App />
       </Provider>
     </React.StrictMode>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById("root")
 )
 
