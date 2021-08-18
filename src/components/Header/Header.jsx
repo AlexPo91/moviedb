@@ -8,8 +8,12 @@ const Header = () => (
       <div className={styles.header__main}>
         <nav className={styles.nav__menu}>
           <div className={styles.nav__menu_item}>
-            <Link to="/">
-              <img className={styles.logo} src="/assets/logo.svg" alt="logo" />
+            <Link to="/home">
+              <img
+                className={styles.logo}
+                src={`${process.env.PUBLIC_URL}/assets/logo.svg`}
+                alt="logo"
+              />
             </Link>
             <Link to="/films">Фильмы</Link>
             <Link to="/serials">Сериалы</Link>

@@ -1,5 +1,5 @@
 import React from "react"
-import { Switch, Route, BrowserRouter } from "react-router-dom"
+import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom"
 import "./App.css"
 import Header from "./components/Header"
 import Films from "./pages/Films/Films"
@@ -15,7 +15,7 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path="/">
+          <Route path="/home">
             <Home />
           </Route>
           <Route path="/films">
@@ -27,6 +27,7 @@ function App() {
           <Route path="/search=:query">
             <FoundFilmsContainer />
           </Route>
+          <Redirect from="/" to="/home" />
         </Switch>
       </div>
     </BrowserRouter>
