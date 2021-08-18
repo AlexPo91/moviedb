@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { Switch, Route, BrowserRouter } from "react-router-dom"
+import "./App.css"
+import Header from "./components/Header"
+import Films from "./pages/Films/Films"
+import FoundFilmsContainer from "./pages/FoundFilms/FoundFilmsContainer"
+// import SearchPanel from "./components/SearchPanel/SearchPanelContainer"
+// import PopularMovie from "./components/PopularMovie/PopularMovieContainer"
+import Home from "./pages/Home/Home"
+import Serials from "./pages/Serials/Serials"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/films">
+            <Films />
+          </Route>
+          <Route path="/serials">
+            <Serials />
+          </Route>
+          <Route path="/search=:query">
+            <FoundFilmsContainer />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

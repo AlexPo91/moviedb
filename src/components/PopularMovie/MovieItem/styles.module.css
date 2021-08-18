@@ -1,0 +1,28 @@
+
+.movie__item img{
+    border-radius: 5%;
+}
+.vote__average {
+    position: absolute;
+    left: 15%
+    
+}
+.vote__average span{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.vote__average canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h4 {
+    margin-bottom: 0;
+}
