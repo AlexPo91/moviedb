@@ -2,10 +2,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 // import { Link } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 import styles from "./styles.module.css"
-// eslint-disable-next-line import/extensions
 
-const SearchPanel = ({ searchMovie, setSearchMovie, getMovie }) => {
+const SearchPanel = ({
+  searchMovie,
+  setSearchMovie,
+  // getMovie
+}) => {
+  const history = useHistory()
   const handleSubmit = (e) => {
     e.preventDefault()
     setSearchMovie(e.target.value)
@@ -34,7 +39,7 @@ const SearchPanel = ({ searchMovie, setSearchMovie, getMovie }) => {
               type="submit"
               onClick={(e) => {
                 e.preventDefault()
-                getMovie(searchMovie)
+                history.push(`/search=${searchMovie}`)
               }}
               value="Search"
             />
@@ -48,5 +53,5 @@ export default SearchPanel
 SearchPanel.propTypes = {
   searchMovie: PropTypes.string.isRequired,
   setSearchMovie: PropTypes.func.isRequired,
-  getMovie: PropTypes.func.isRequired,
+  // getMovie: PropTypes.func.isRequired,
 }
