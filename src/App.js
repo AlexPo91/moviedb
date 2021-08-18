@@ -1,5 +1,5 @@
 import React from "react"
-import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom"
+import { Switch, Route, Redirect } from "react-router-dom"
 import "./App.css"
 import Header from "./components/Header"
 import Films from "./pages/Films/Films"
@@ -11,26 +11,22 @@ import Serials from "./pages/Serials/Serials"
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/films">
-            <Films />
-          </Route>
-          <Route path="/serials">
-            <Serials />
-          </Route>
-          <Route path="/search=:query">
-            <FoundFilmsContainer />
-          </Route>
-          <Redirect from="/" to="/home" />
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <Header />
+      <Switch>
+        <Route path="/home" render={Home} />
+        <Route path="/films">
+          <Films />
+        </Route>
+        <Route path="/serials">
+          <Serials />
+        </Route>
+        <Route path="/search=:query">
+          <FoundFilmsContainer />
+        </Route>
+        <Redirect from="/" to="/home" />
+      </Switch>
+    </div>
   )
 }
 
